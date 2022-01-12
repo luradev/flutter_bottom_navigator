@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bottom_navigator/card2.dart';
 
 import 'card1.dart';
 import 'fooderlich_theme.dart';
@@ -35,9 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
   static var paginas = [
     const Card1(),
-    Container(
-      color: Colors.green,
-    ),
+    const Card2(),
     Container(
       color: Colors.red,
     )

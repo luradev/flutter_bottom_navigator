@@ -50,7 +50,7 @@ class Card1 extends StatelessWidget {
         decoration: BoxDecoration(
           image: const DecorationImage(
             image: NetworkImage(
-                'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
+                'https://pickawall.com.au/wp-content/uploads/alamy_CY20PB.jpg'),
             fit: BoxFit.cover,
           ),
           borderRadius: BorderRadius.circular(10.0),

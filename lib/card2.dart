@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bottom_navigator/author_card.dart';
+import 'package:flutter_bottom_navigator/fooderlich_theme.dart';
 
 class Card2 extends StatelessWidget {
   const Card2({Key? key}) : super(key: key);
@@ -12,11 +14,42 @@ class Card2 extends StatelessWidget {
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: NetworkImage(
-                    'https://www.rushlane.com/wp-content/uploads/2019/12/volvo-xc40-petrol-bs6-india-launch.jpg'),
+                    'https://r1.ilikewallpaper.net/iphone-12-pro-wallpapers/download-103214/photography-of-tree.jpg'),
                 fit: BoxFit.cover),
             borderRadius: BorderRadius.circular(10)),
         child: Column(
-          children: [],
+          children: [
+            const AuthorCard(
+              authorName: 'Lucau Rafael',
+              title: 'Smoothie Connoisseur',
+              imageProvider: NetworkImage(
+                  'https://img.icons8.com/emoji/48/000000/boy-medium-skin-tone.png'),
+            ),
+            Expanded(
+                child: Stack(
+              children: [
+                Positioned(
+                  child: Text(
+                    'Recipe',
+                    style: FooderlichTheme.lightTextTheme.headline1,
+                  ),
+                  bottom: 16,
+                  right: 16,
+                ),
+                Positioned(
+                  child: RotatedBox(
+                    quarterTurns: 3,
+                    child: Text(
+                      'Smoothies',
+                      style: FooderlichTheme.lightTextTheme.headline1,
+                    ),
+                  ),
+                  bottom: 70,
+                  left: 16,
+                )
+              ],
+            ))
+          ],
         ),
       ),
     );
